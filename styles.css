@@ -1,0 +1,278 @@
+/* Color palette definitions */
+:root {
+    --green-light: #BDE01F; /* light green colour */
+    --green-bright: #1FE023; /* bright green colour */
+    --green-pale: #6DE01F; /* pale lime green colour */
+    --yellow: #E0D41F; /* yellow colour */
+    --aqua: #1FE063; /* aqua green colour */
+    --aqua-light: #99E069; /* light aqua green colour */
+}
+
+/*  body style */
+body {
+    font-family: 'Roboto', sans-serif; /* Apply Roboto font to body */
+    color: #000000; /* Set global text colour black */
+    margin: 0; /* remeved no default margin */
+    padding: 0; /* Removed or no default padding */
+    background-color: white; /* Set background colour white */
+}
+
+/* Navigation style */
+nav {
+    background-color: var(--green-light); /* Set background colour of the navigation to green light */
+    position: fixed; /* Fix navigation bar to the top */
+    width: 100%; /* Full 100% width navigation */
+    top: 0; /* Align to the very top of the viewport/page */
+    left: 0; /* Align to the very left of the viewport.page */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a shadow for the depth */
+    z-index: 1000; /* Keep nav bar above all elements */
+    display: flex; /* Flexbox layout for navbar items */
+    align-items: center; /* Vertical center item */
+    padding: 10px 20px; /* padding added*/
+}
+
+/* Menu mobile icon */
+#menu-icon {
+    display: none; /* Hide by default */
+    cursor: pointer; /* Change cursor to pointer whilke hovering */
+    font-size: 30px; /* Set font size for hamburger icon 30x */
+    padding: 10px; /* padding added*/
+    color: #000000; /* Icon colour black */
+}
+
+/* Navigation list style - makes its so the nav bar on the top is cenetreed as in a row instead of a stacked in a line.*/
+nav ul {
+    display: flex; /* Flexbox for nav links */
+    justify-content: center; /* Center-align the navigation list */
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 10px 20px; /* Add padding around links in the nav bar. */
+}
+
+/* Links inside navigation- uses a black readable text for the nav bar. */
+nav ul li a {
+    color: #000000; /* Set link color to black */
+    text-decoration: none; /* Remove underline from links */
+    font-weight: 500; /* Medium font weight for readability */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for navigation link - makes it yellow when hovering over the link */
+nav ul li a:hover, nav ul li a:focus {
+    color: var(--yellow); /* Change link color on hover/focus to yellow */
+}
+
+
+/* Main content style is center aligned with a 70 top padding.  */
+main {
+    padding-top: 77px; /* Space below fixed nav */
+    text-align: center; /* Center-align main content */
+}
+
+
+/* Contact section style */
+.contact-section {
+    max-width: 880px; /* Max width for the contact sections */
+    margin: 0 auto; /* Center the section at 0 */
+    padding: 20px; /*  padding added inside */
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for increased depthh */
+    background-color: #f9f9f9; /*  white background colour */
+    border-radius: 8px; /* Rounded corners*/
+}
+
+/* Contact form layout */
+.contact-form {
+    display: grid; /* Use grid display layout */
+    grid-template-columns: 1fr; /* Single-column layout */
+    gap: 15px; /* Space between form elements */
+    margin-top: 20px; /* Space above form */
+}
+
+/* Contact form label */
+.contact-form label {
+    font-weight: bold; /* Bold font labels */
+}
+
+/* Input and textarea styling */
+.contact-form input,
+.contact-form textarea {
+    width: 100%; /* Full-width input and textarea */
+    padding: 12px; /* Add padding inside inputs */
+    box-sizing: border-box; /* Include padding and border fior width/height */
+    border: 2px solid #ccc; /* Add border */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.contact-form textarea {
+    height: 100px; /* fixed height for text area */
+    resize: none; /* no resize */
+}
+
+/* Button styling */
+.contact-form button {
+    background-color: var(--green-bright); /* Bright green button background */
+    color: white; /* White text */
+    padding: 12px 20px; /* Padding inside button */
+    border: none; /* no button border */
+    border-radius: 4px; /* Round the button corners */
+    cursor: pointer; /* Pointer on hover */
+    font-size: 16px; /* Font size for button text */
+}
+
+/* Hover effect of the button */
+.contact-form button:hover {
+    background-color: var(--green-pale); /* Pale green background for the hover */
+}
+
+/* Profile image style */
+.profile-pic {
+    width: 150px; /* 150 width */
+    height: auto; /* Maintain aspect auto  ratio */
+    border-radius: 50%; /* Make image circular 50% */
+    margin: 0 auto; /* Center the image to 0 in the center */
+    display: block; /* Block display for center */
+}
+
+/* Projects section style */
+.projects-section {
+    max-width: 1200px; /* tyhe Max width for the projects section */
+    margin: 40px auto; /* the Center the section */
+    padding: 20px; /* Padded 20x inside section */
+    background-color: #fff; /* White background */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Shadow for the depth */
+}
+
+/* Grid layout for projects */
+.projects-container {
+    display: grid; /* grid layout https://www.w3schools.com/cssref/pr_grid-template-columns.php  */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Creates a responsive grid layout https://www.w3schools.com/cssref/pr_grid-template-columns.php:
+        - 'auto-fill' means the grid will fill as many columns as possible.
+        - 'minmax (300px, 1fr) sets a minimum column width of 300px and a max of 1 frac of the available space */
+    gap: 30px; /* Adds 30px space between the grid items */
+}
+/* Individual project card styling */
+.project-card {
+    border: 2px solid #e0e0e0; /* Border around each project */
+    padding: 20px; /* Padding inside project card */
+    background-color: #fff; /* White background */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Shadow for the  depth */
+    border-radius: 8px; /* Rounded corners */
+    transition: all 0.3s ease-in-out; /* Smooth transition on the hover */
+}
+
+/* Hover effect for project cards */
+.project-card:hover {
+    transform: translateY(-5px); /* Lift on hover */
+    border-color: var(--green-light); /* Change border light green colour on hover */
+}
+
+/* Project title style */
+.project-title {
+    font-size: 20px; /* Set font size for project title */
+    color: #333; /* Dark grey color */
+    margin-bottom: 10px; /* Space below title */
+}
+
+/* Project link style */
+.project-link {
+    display: block; /* Block display for full width */
+    color: rgb(1, 14, 27); /* Blue link color */
+    font-weight: 600; /* Bold text */
+    margin-top: 5px; /* Space above link */
+    text-decoration: none; 
+}
+
+/* Hover effect for project linkss */
+.project-link:hover {
+    text-decoration: underline; /* Underlined on hover */
+}
+
+/* Project description styles */
+.project-description {
+    font-size: 16px; /* Font size for description */
+    color: #696666; /*  grey color */
+    margin-top: 10px; /* margin 10 Space above description */
+    margin-bottom: 10px; /* 10 Space below description */
+}
+
+/* Domain tag style */
+.project-domain {
+    display: inline-block; /* Inline block for tags */
+    padding: 5px 10px; /* Padding inside tags */
+    border-radius: 15px; /* 15 rouded the corners */
+    color: white; /* White text */
+    font-size: 12px; /* 12 font size */
+    margin-top: 5px; /* 5px above tags */
+    margin-right: 5px; /* 5 right-x between tags */
+    background-color: var(--green-light); /* Green background for domains */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+/* Footer style */
+footer {
+    text-align: center; /* align footer text cenrter */
+    padding: 20px; /* 20 Padded inside footer */
+    background-color: #333; /* grey  background */
+    color: #fff; /* White  text */
+    margin-top: 40px; /* Space above footer */
+}
+
+/* Media Queries */
+
+/* Tablet screen size */
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr; /* Single column layout 1  */
+    }
+
+    #menu-icon {
+        display: block; /*  menu icon for small screens */
+    }
+
+    #nav-list {
+        flex-direction: column;
+        width: 100%;
+        display: none; /* Hide navigation list none so that it is easier for the person to see website content  */
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background: var(--green-light);
+    }
+
+    #nav-list li {
+        text-align: center;
+        width: 100%;
+    }
+
+    #nav-list li a {
+        display: block;
+        padding: 10px;
+    }
+
+    main {
+        padding-top: 160px; /* Increase paddied ng to ensure visibility d nav */
+    }
+}
+
+/* Mobile screen size */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px; /* Reduce font size  */
+    }
+
+    nav {
+        padding: 5px 0; /* Reduce vertical padd */
+    }
+
+    #nav-list li a {
+        padding: 10px; /* Padding for easier touch */
+    }
+
+    main {
+        padding-top: 200px; /* Increase padding */
+    }
+}
